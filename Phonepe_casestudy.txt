@@ -1,0 +1,223 @@
+PhonePe Digital Payments Case Study:
+(Analyzing Transaction and Demographic Data)
+
+Overview:
+This case study involves analyzing transaction data from the financial application PhonePe along with demographic data across various states and districts in India. The objective is to provide insights into transaction trends, device usage, and demographic correlations, while ensuring data consistency and performing advanced analyses to uncover deeper insights.
+
+The datasets span multiple years and quarters, providing a comprehensive view of transactions, user behavior, and demographic details. Participants are expected to use their Python skills to load, explore, and analyze the data, ultimately deriving meaningful insights and visualizations.
+
+Dataset Details:
+The data is spread across multiple sheets in an Excel file, each containing different aspects of the transaction and demographic data. Below is an overview of each dataset:
+
+This case study utilizes five key datasets:
+State_Txn and Users:
+Contains transaction and user data at the state level:
+
+Number of transactions
+
+Total transaction amount
+
+Average transaction value
+
+Number of registered users
+
+App opens
+
+State_TxnSplit:
+Breakdown of transaction types at the state level:
+
+Transaction types
+
+Number of transactions
+
+Total transaction amount
+
+Average transaction value per type
+
+State_DeviceData:
+Details device brands used by registered users at the state level:
+
+Number of registered users per brand
+
+Percentage of users using each brand
+
+District_Txn and Users:
+Contains transaction and user data at the district level.
+
+District Demographics:
+Demographic details per district:
+
+Population
+
+Area
+
+Population density
+
+District headquarters
+
+Data Dictionary
+1. State_Txn and Users:
+State: Name of the state
+
+Year: Year of the data
+
+Quarter: Quarter of the year
+
+Transactions: Number of transactions
+
+Amount (INR): Total amount in INR
+
+ATV (INR): Average transaction value in INR
+
+Registered Users: Number of registered users
+
+App Opens: Number of app opens
+
+2. State_TxnSplit:
+State, Year, Quarter
+
+Transaction Type: (e.g., Recharge & bill payments, P2P payments)
+
+Transactions, Amount (INR), ATV (INR)
+
+3. State_DeviceData:
+State, Year, Quarter
+
+Brand: Device brand
+
+Registered Users
+
+Percentage: of users using the brand
+
+4. District_Txn and Users:
+State, Year, Quarter
+
+District, Code
+
+Transactions, Amount (INR), ATV (INR)
+
+Registered Users, App Opens
+
+5. District Demographics:
+State, District, Headquarters
+
+Population, Area (sq km), Density, Code, Alternate Name
+
+Task 1: Data Loading and Understanding
+1.1 Load each dataset and display its structure
+Load State_Txn and Users: first 5 rows
+
+Load State_TxnSplit: last 10 rows
+
+Load State_DeviceData: 10 rows from middle
+
+Load District_Txn and Users: first & last 10 rows
+
+Load District Demographics: every 10th row
+
+1.2 Display basic statistics and data types
+Summary statistics (mean, median, std, etc.)
+
+Data types of each column
+
+1.3 Check for missing values
+Identify missing values in each dataset
+
+Calculate percentage of missing values per column
+
+Highlight the column with highest missing %
+
+1.4 Create a summary
+Total number of states and districts
+
+State with the highest number of districts
+
+Task 2: Exploratory Data Analysis (EDA)
+2.1 Analyze transaction trends over years per state
+Total transactions and amount per state over years
+
+Top 5 and bottom 5 states by transaction volume
+
+2.2 Identify most common transaction types per state and quarter
+Most frequent transaction type
+
+Display results in tabular format
+
+2.3 Determine device brand with highest users per state
+Identify most-used device brand in each state
+
+2.4 Top district per state based on population
+District with highest population per state
+
+Column chart of same
+
+2.5 Calculate Average Transaction Value (ATV) per state
+Compute average transaction value
+
+Top 5 and bottom 5 states by ATV
+
+2.6 Analyze app usage trends
+Total number of app opens by year and quarter
+
+Line plot of app opens over time for selected state
+
+2.7 Distribution of transaction types
+Bar chart: Distribution of types by state (latest quarter)
+
+2.8 Unique mapping of district name and code
+Identify unique mapping
+
+Create and export CSV
+
+Task 3: Data Quality Checks
+3.1 Ensure data consistency (State vs District level)
+Sum up district-level data for each state
+
+Compare with state-level data
+
+Display any discrepancies
+
+Task 4: Data Merging and Advanced Analysis
+4.1 Ratio of users to population by state
+Merge State_Txn and Users with District Demographics
+
+Display and chart user-to-population ratio
+
+4.2 Correlate population density with transaction volume
+Merge District_Txn and Users with District Demographics
+
+Correlation + scatter plot
+
+4.3 Average transaction amount per user
+Merge relevant datasets
+
+Top 5 and bottom 5 states by avg transaction per user
+
+4.4 Device brand usage ratio
+Merge State_DeviceData with State_Txn and Users
+
+Calculate and chart brand usage ratio
+
+
+Task 5: Data Visualization
+5.1: Plot the total transactions and amount over time for a selected state
+Create a line plot showing the total number of transactions and the total transaction amount over time (years and quarters) for a selected state.
+[Hint: you can select any state, maybe your home state or state with max transactions]
+
+5.2: Create a pie chart showing the distribution of transaction types for a specific quarter
+Create a pie chart showing the distribution of different transaction types for a selected state and quarter.
+
+5.3: Visualize the population density of districts in a selected state
+Create a bar plot showing the population density of districts in a selected state.
+
+Task 6: Insights and Conclusions [Advanced Section]
+6.1: Identify any trends or patterns in the transaction data
+Analyze the transaction data to identify any noticeable trends or patterns. Summarize your findings.
+[Hint: you can create line graph – at year or quarter and discuss your findings with interviewer]
+
+6.2: Correlate demographic data with transaction data
+Find correlations between demographic data (e.g., population density) and transaction data (e.g., transaction volume). Summarize your findings.
+[Hint: you can use corr()]
+
+6.3: Summarize findings and insights
+Summarize the key findings and insights from your analysis. Provide actionable recommendations based on the data.
